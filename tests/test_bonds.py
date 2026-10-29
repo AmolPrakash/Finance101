@@ -26,3 +26,7 @@ def test_duration_approximates_price_change():
     mod_dur = bonds.modified_duration(1000, 0.05, 0.05, 10)
     assert (bumped - base) / base == pytest.approx(-mod_dur * 0.0001, rel=1e-3)
     assert bonds.convexity(1000, 0.05, 0.05, 10) > 0
+
+
+def test_current_yield():
+    assert bonds.current_yield(950, 1000, 0.05) == pytest.approx(50 / 950)

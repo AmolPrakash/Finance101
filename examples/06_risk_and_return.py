@@ -1,4 +1,4 @@
-"""Lesson 06: Measuring return and risk on a price series."""
+"""Chapter 14: Measuring return and risk on a price series."""
 import sys
 from pathlib import Path
 

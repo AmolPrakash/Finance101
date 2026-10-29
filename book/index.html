@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finance101</title>
+  <meta name="description" content="An interactive textbook covering Finance 101, 102, 201 and 202, with runnable Python on every page.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231d5c4f'/><path d='M7 23l6-7 5 4 7-10' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/lib/codemirror.css">
+  <link rel="stylesheet" href="assets/app.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    try { const t = localStorage.getItem("f101-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn only-mobile" id="menu-btn" aria-label="Open table of contents">☰</button>
+    <a class="brand" href="#/">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7"/><path d="M7 23l6-7 5 4 7-10"/></svg>
+      Finance101
+    </a>
+    <nav class="top-links">
+      <a href="#/">Courses</a>
+      <a href="#/lab">Code Lab</a>
+      <a href="#/resources">Resources</a>
+    </nav>
+    <div class="top-actions">
+      <span class="py-status" id="py-status" title="Python runs in your browser with Pyodide">
+        <span class="dot"></span><span class="label">Python idle</span>
+      </span>
+      <button class="btn btn-ghost" id="scratch-btn" title="Toggle the scratchpad (Ctrl+.)">Scratchpad</button>
+      <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="layout" id="layout">
+    <aside class="sidebar" id="sidebar" aria-label="Table of contents"></aside>
+    <main class="content" id="content" tabindex="-1"></main>
+    <aside class="scratchpad" id="scratchpad" aria-label="Python scratchpad">
+      <div class="scratch-head">
+        <div>
+          <strong>Scratchpad</strong>
+          <span class="muted" id="scratch-scope">shares variables with this chapter</span>
+        </div>
+        <button class="icon-btn" id="scratch-close" aria-label="Close scratchpad">×</button>
+      </div>
+      <div class="scratch-editor" id="scratch-editor"></div>
+      <div class="cell-bar">
+        <button class="btn btn-run" id="scratch-run">▶ Run</button>
+        <span class="hint">Shift+Enter</span>
+        <span class="spacer"></span>
+        <button class="btn btn-ghost" id="scratch-clear">Clear output</button>
+      </div>
+      <div class="scratch-output output" id="scratch-output"></div>
+    </aside>
+  </div>
+  <div class="backdrop" id="backdrop"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/lib/codemirror.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/mode/python/python.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/addon/edit/matchbrackets.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

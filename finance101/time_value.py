@@ -1,4 +1,4 @@
-"""Lesson 01 - Time value of money.
+"""Chapters 02-04 - Time value of money, interest rates and annuities.
 
 A dollar today is worth more than a dollar tomorrow because today's dollar
 can be invested to earn a return. Every other topic in finance builds on the
@@ -85,3 +85,20 @@ def present_value_perpetuity(payment: float, rate: float, growth: float = 0.0) -
 def real_rate(nominal_rate: float, inflation: float) -> float:
     """Fisher equation: (1 + nominal) = (1 + real) * (1 + inflation)."""
     return (1 + nominal_rate) / (1 + inflation) - 1
+
+
+def solve_rate(present_value: float, future_value: float, periods: float) -> float:
+    """Rate per period that grows ``present_value`` into ``future_value``: (FV/PV)^(1/n) - 1"""
+    return (future_value / present_value) ** (1 / periods) - 1
+
+
+def solve_periods(present_value: float, future_value: float, rate: float) -> float:
+    """Periods needed to grow ``present_value`` into ``future_value``: ln(FV/PV) / ln(1 + r)"""
+    return math.log(future_value / present_value) / math.log(1 + rate)
+
+
+def annuity_payment_for_goal(goal: float, rate: float, periods: int) -> float:
+    """Level saving per period needed to reach ``goal`` (end-of-period deposits)."""
+    if rate == 0:
+        return goal / periods
+    return goal * rate / ((1 + rate) ** periods - 1)

@@ -1,4 +1,4 @@
-"""Lesson 02: Should we invest in this project?"""
+"""Chapter 08: Should we invest in this project?"""
 import sys
 from pathlib import Path
 

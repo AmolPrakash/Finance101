@@ -27,3 +27,29 @@ def test_beta_and_capm():
 
 def test_wacc():
     assert pf.wacc(600, 400, 0.10, 0.05, 0.25) == pytest.approx(0.075)
+
+
+def test_min_variance_weights_match_two_asset_formula():
+    cov = [[0.04, 0.006], [0.006, 0.01]]
+    w = pf.min_variance_weights(cov)
+    assert w[0] == pytest.approx(pf.min_variance_weight(0.2, 0.1, 0.3))
+    assert sum(w) == pytest.approx(1)
+
+
+def test_tangency_portfolio_has_highest_sharpe():
+    mu = [0.10, 0.07, 0.05]
+    cov = [[0.04, 0.006, 0.002], [0.006, 0.0225, 0.003], [0.002, 0.003, 0.01]]
+    rf = 0.02
+
+    def sharpe(w):
+        return (pf.portfolio_return(w, mu) - rf) / pf.portfolio_volatility(w, cov)
+
+    best = pf.tangency_weights(mu, cov, rf)
+    for other in ([1 / 3] * 3, [0.5, 0.3, 0.2], [0.2, 0.2, 0.6]):
+        assert sharpe(best) >= sharpe(other)
+
+
+def test_volatility_is_real_for_perfect_negative_correlation():
+    for i in range(101):
+        vol = pf.two_asset_volatility(i / 100, 0.18, 0.07, -1.0)
+        assert isinstance(vol, float) and vol >= 0

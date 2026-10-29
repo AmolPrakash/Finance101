@@ -1,4 +1,4 @@
-"""Lesson 09: Option payoffs and Black-Scholes pricing."""
+"""Chapters 20-22: Option payoffs and Black-Scholes pricing."""
 import sys
 from pathlib import Path
 

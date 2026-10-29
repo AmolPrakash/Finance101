@@ -1,0 +1,61 @@
+{
+  "courses": [
+    {
+      "id": "fin101",
+      "code": "FIN 101",
+      "title": "Foundations of Finance",
+      "summary": "The time value of money, interest rates, loans, the three financial statements and how to use them in your own financial life.",
+      "chapters": [
+        {"slug": "00-how-to-use-this-book", "title": "How to Use This Book (and a Python Primer)"},
+        {"slug": "01-the-financial-system", "title": "What Finance Is and How the Financial System Works"},
+        {"slug": "02-time-value-of-money", "title": "The Time Value of Money"},
+        {"slug": "03-interest-rates-and-inflation", "title": "Interest Rates, Compounding and Inflation"},
+        {"slug": "04-annuities-perpetuities-loans", "title": "Annuities, Perpetuities and Loans"},
+        {"slug": "05-financial-statements", "title": "The Three Financial Statements"},
+        {"slug": "06-ratio-analysis", "title": "Financial Ratio Analysis"},
+        {"slug": "07-personal-finance", "title": "Personal Finance: Saving, Debt and Retirement"}
+      ]
+    },
+    {
+      "id": "fin102",
+      "code": "FIN 102",
+      "title": "Corporate Finance & Valuation",
+      "summary": "How firms decide which projects to fund, how bonds and stocks are valued, what capital costs, and how much debt to use.",
+      "chapters": [
+        {"slug": "08-capital-budgeting", "title": "Capital Budgeting: NPV, IRR and Friends"},
+        {"slug": "09-project-cash-flows", "title": "Estimating Project Cash Flows"},
+        {"slug": "10-bond-valuation", "title": "Bond Valuation"},
+        {"slug": "11-stock-valuation", "title": "Stock Valuation"},
+        {"slug": "12-cost-of-capital", "title": "The Cost of Capital"},
+        {"slug": "13-capital-structure-and-payout", "title": "Capital Structure and Payout Policy"}
+      ]
+    },
+    {
+      "id": "fin201",
+      "code": "FIN 201",
+      "title": "Investments",
+      "summary": "Measuring risk and return, building portfolios, CAPM and factor models, market efficiency, interest-rate risk and judging performance.",
+      "chapters": [
+        {"slug": "14-risk-and-return", "title": "Measuring Risk and Return"},
+        {"slug": "15-portfolio-theory", "title": "Portfolio Theory and Diversification"},
+        {"slug": "16-capm-factors-efficiency", "title": "CAPM, Factor Models and Market Efficiency"},
+        {"slug": "17-term-structure-interest-rate-risk", "title": "The Yield Curve and Interest-Rate Risk"},
+        {"slug": "18-performance-evaluation", "title": "Performance Evaluation"}
+      ]
+    },
+    {
+      "id": "fin202",
+      "code": "FIN 202",
+      "title": "Derivatives & Risk Management",
+      "summary": "Forwards, futures, swaps and options; binomial trees, Black-Scholes and the Greeks; Monte Carlo, Value at Risk and behavioral finance.",
+      "chapters": [
+        {"slug": "19-forwards-futures-swaps", "title": "Forwards, Futures and Swaps"},
+        {"slug": "20-options-and-strategies", "title": "Options and Option Strategies"},
+        {"slug": "21-binomial-pricing", "title": "Binomial Option Pricing"},
+        {"slug": "22-black-scholes-greeks", "title": "Black-Scholes and the Greeks"},
+        {"slug": "23-monte-carlo-risk-management", "title": "Monte Carlo Simulation and Risk Management"},
+        {"slug": "24-behavioral-finance-capstone", "title": "Behavioral Finance and Capstone Project"}
+      ]
+    }
+  ]
+}

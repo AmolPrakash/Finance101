@@ -1,4 +1,4 @@
-"""Lesson 06 - Risk and return.
+"""Chapter 14 - Risk and return.
 
 Return measures what you earned; risk (volatility) measures how much that
 return bounced around. Investors demand higher expected return for more risk.
@@ -64,5 +64,18 @@ def historical_var(returns: Sequence[float], confidence: float = 0.95) -> float:
     Returned as a positive number (0.03 means a 3% loss).
     """
     ordered = sorted(returns)
-    index = int((1 - confidence) * len(ordered))
+    index = int((1 - confidence) * len(ordered) + 1e-9)  # guard against 1.999... from float math
     return -ordered[index]
+
+
+def expected_shortfall(returns: Sequence[float], confidence: float = 0.95) -> float:
+    """Average loss in the worst (1 - confidence) tail (a.k.a. CVaR), as a positive number."""
+    ordered = sorted(returns)
+    cutoff = max(1, int((1 - confidence) * len(ordered) + 1e-9))
+    return -statistics.mean(ordered[:cutoff])
+
+
+def parametric_var(mean: float, stdev: float, confidence: float = 0.95) -> float:
+    """Value at Risk assuming normally distributed returns, as a positive number."""
+    z = statistics.NormalDist().inv_cdf(1 - confidence)
+    return -(mean + z * stdev)

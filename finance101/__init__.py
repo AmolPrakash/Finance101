@@ -1,16 +1,23 @@
 """Finance101: the fundamentals of finance, implemented in plain Python.
 
-Each module maps to one lesson in ``lessons/``:
+The interactive textbook in ``book/`` teaches every module:
 
-    01  time_value       Time value of money (PV, FV, annuities, rates)
-    02  capital_budgeting NPV, IRR, payback, profitability index
-    03  loans            Loan payments and amortization schedules
-    04  bonds            Bond pricing, yield to maturity, duration
-    05  equity           Stock valuation (dividend discount models)
-    06  risk_return      Returns, volatility, Sharpe ratio, drawdown
-    07  portfolio        Diversification, portfolio risk, beta, CAPM
-    08  statements       Financial statement ratios
-    09  options          Option payoffs and Black-Scholes
+    time_value          Time value of money, annuities, rates        (FIN 101)
+    loans               Loan payments and amortization               (FIN 101)
+    statements          Financial statement ratios                   (FIN 101)
+    capital_budgeting   NPV, IRR, payback, profitability index       (FIN 102)
+    project_cash_flows  Free cash flow, depreciation tax shields     (FIN 102)
+    bonds               Bond pricing, yield, duration, convexity     (FIN 102/201)
+    equity              Dividend discount models, DCF                (FIN 102)
+    capital_structure   Modigliani-Miller, levered beta, payouts     (FIN 102)
+    risk_return         Returns, volatility, Sharpe, VaR             (FIN 201)
+    portfolio           Diversification, frontier, beta, CAPM, WACC  (FIN 201)
+    yield_curve         Spot/forward rates, bootstrapping            (FIN 201)
+    performance         Sortino, Treynor, alpha, information ratio   (FIN 201)
+    derivatives         Forwards, futures, swaps                     (FIN 202)
+    options             Payoffs, Black-Scholes, Greeks, implied vol  (FIN 202)
+    binomial            Binomial trees, replication                  (FIN 202)
+    simulation          Monte Carlo pricing and risk                 (FIN 202)
 
 Everything uses only the Python standard library so the math stays visible.
 """
