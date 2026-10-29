@@ -1,4 +1,4 @@
-"""Lesson 04: Bond prices, yields, and interest-rate risk."""
+"""Chapter 10: Bond prices, yields, and interest-rate risk."""
 import sys
 from pathlib import Path
 

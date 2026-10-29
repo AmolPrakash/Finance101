@@ -1,4 +1,4 @@
-"""Lesson 01: How much is money worth across time?"""
+"""Chapter 02: How much is money worth across time?"""
 import sys
 from pathlib import Path
 

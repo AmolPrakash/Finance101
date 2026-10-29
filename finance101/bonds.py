@@ -1,4 +1,4 @@
-"""Lesson 04 - Bonds.
+"""Chapters 10 and 17 - Bonds.
 
 A bond's price is the present value of its coupons plus its face value.
 Prices and yields move in opposite directions; duration measures how much.

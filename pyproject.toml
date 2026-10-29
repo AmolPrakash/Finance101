@@ -5,12 +5,13 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "finance101"
 version = "0.1.0"
-description = "Fundamentals of finance implemented in plain Python"
+description = "An interactive textbook covering Finance 101, 102, 201 and 202, implemented in plain Python"
 readme = "README.md"
 requires-python = ">=3.10"
 
 [project.optional-dependencies]
 dev = ["pytest>=7"]
+book = ["numpy>=1.26", "matplotlib>=3.8"]   # used by some chapter cells
 
 [tool.setuptools]
 packages = ["finance101"]

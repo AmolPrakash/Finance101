@@ -1,4 +1,4 @@
-"""Lesson 08: Turning financial statements into ratios."""
+"""Chapter 06: Turning financial statements into ratios."""
 import sys
 from pathlib import Path
 

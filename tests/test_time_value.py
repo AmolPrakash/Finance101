@@ -33,3 +33,14 @@ def test_doubling():
 
 def test_real_rate():
     assert tv.real_rate(0.08, 0.03) == pytest.approx(0.048544, abs=1e-6)
+
+
+def test_solvers_invert_future_value():
+    fv = tv.future_value(1000, 0.06, 12)
+    assert tv.solve_rate(1000, fv, 12) == pytest.approx(0.06)
+    assert tv.solve_periods(1000, fv, 0.06) == pytest.approx(12)
+
+
+def test_annuity_payment_for_goal():
+    pmt = tv.annuity_payment_for_goal(100_000, 0.05, 20)
+    assert tv.future_value_annuity(pmt, 0.05, 20) == pytest.approx(100_000)

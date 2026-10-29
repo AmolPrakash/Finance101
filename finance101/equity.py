@@ -1,4 +1,4 @@
-"""Lesson 05 - Stock valuation.
+"""Chapter 11 - Stock valuation.
 
 A stock is worth the present value of the cash it will pay its owners.
 Dividend discount models (DDM) make that idea concrete.

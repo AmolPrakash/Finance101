@@ -1,4 +1,4 @@
-"""Lesson 07: Diversification and the price of risk."""
+"""Chapters 15-16: Diversification and the price of risk."""
 import sys
 from pathlib import Path
 

@@ -1,4 +1,4 @@
-"""Lesson 08 - Reading financial statements through ratios.
+"""Chapters 05-06 - Reading financial statements through ratios.
 
 The income statement shows profit over a period, the balance sheet shows what
 a company owns and owes at a point in time, and the cash flow statement shows

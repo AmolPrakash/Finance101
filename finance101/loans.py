@@ -1,4 +1,4 @@
-"""Lesson 03 - Loans and amortization.
+"""Chapter 04 - Loans and amortization.
 
 A fully amortizing loan is just an annuity seen from the lender's side: the
 borrower's level payments have a present value equal to the amount borrowed.

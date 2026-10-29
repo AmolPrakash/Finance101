@@ -1,4 +1,4 @@
-"""Lesson 02 - Capital budgeting: deciding which projects are worth doing.
+"""Chapter 08 - Capital budgeting: deciding which projects are worth doing.
 
 Cash flows are a list where index 0 is today (usually a negative investment)
 and index t is the cash flow at the end of period t.

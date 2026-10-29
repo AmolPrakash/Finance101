@@ -27,3 +27,13 @@ def test_volatility_and_sharpe():
 def test_var():
     returns = [i / 100 for i in range(-10, 10)]  # 20 returns from -10% to +9%
     assert rr.historical_var(returns, 0.95) == pytest.approx(0.09)
+
+
+def test_expected_shortfall_is_worse_than_var():
+    returns = [i / 100 for i in range(-10, 10)]
+    assert rr.expected_shortfall(returns, 0.90) == pytest.approx(0.095)
+    assert rr.expected_shortfall(returns, 0.90) >= rr.historical_var(returns, 0.90)
+
+
+def test_parametric_var():
+    assert rr.parametric_var(0.0, 0.01, 0.95) == pytest.approx(0.016449, abs=1e-6)

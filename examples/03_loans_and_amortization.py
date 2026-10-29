@@ -1,4 +1,4 @@
-"""Lesson 03: Where does a mortgage payment actually go?"""
+"""Chapter 04: Where does a mortgage payment actually go?"""
 import sys
 from pathlib import Path
 

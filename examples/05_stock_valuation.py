@@ -1,4 +1,4 @@
-"""Lesson 05: What is a share of stock worth?"""
+"""Chapter 11: What is a share of stock worth?"""
 import sys
 from pathlib import Path
 
